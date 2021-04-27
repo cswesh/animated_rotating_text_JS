@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Rotating Text using JS / JQUERY</title>
+    <style>
+        body{
+            background-color:#000;
+        }
+        div#tag{
+            position: absolute;
+            left:25%;
+            top:15%;
+        }
+    </style>
+</head>
+<body>
+    <div id="tag"></div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" ></script>
+    <script src="script.js"></script>
+    <script>
+        $(document).ready(function(){
+            var entries= [
+                {label : 'HTML'},
+                {label : 'CSS'},
+                {label : 'JAVASCRIPT'},
+                {label : 'JQUERY'},
+                {label : 'PYTHON'},
+                {label : 'DJANGO'},
+                {label : 'DELPHI'},
+                {label : 'XML'},
+                {label : 'C'},
+                {label : 'C#'},
+                {label : 'C++'},
+                {label : 'NODEJS'},
+                {label : 'JAVA'},
+                {label : 'VISUAL BASIC'},
+                {label : 'ACTION SCRIPT'},
+                {label : 'RUBY'},
+                {label : 'OBJECTIVE-C'},
+                {label : 'PASCAL'},
+                {label : 'COBOL'},
+                {label : 'COLD FUSION'},
+                {label : 'PERL'},
+                {label : 'SWITCH APPLE'},
+                {label : 'ALGOL'},
+                {label : 'VISUAL FOXPRO'},
+                {label : 'REBOL'}
+            ];
+            var settings = {
+                entries: entries,
+                width:640,
+                height:480,
+                radius:'65%',
+                radiusMin:75,
+                bgDraw:true,
+                bgColor:'#000',
+                opacityOver:1.00,
+                opacityOut:0.05,
+                opacitySpeed:6,
+                fov:800,
+                speed:2,
+                fontFamily:'Courier,Arial,sans-serif',
+                fontSize:'30',
+                fontColor:'#fff',
+                fontWeight:'bold',
+                fontStyle:'normal',
+                fontStretch:'normal',
+                fontToUpperCase:true
+            };
+            $('#tag').svg3DTagCloud(settings);
+        });
+    </script>
+</body>
+</html>
